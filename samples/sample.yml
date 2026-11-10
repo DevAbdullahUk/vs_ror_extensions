@@ -1,0 +1,9 @@
+# Feature flags
+defaults: &defaults
+  split_and_distribute_tests: false
+  max_rows: 500
+development:
+  <<: *defaults
+  label: "Labs dev"
+  hosts:
+    - localhost

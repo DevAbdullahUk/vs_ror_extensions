@@ -1,0 +1,492 @@
+{
+  "name": "abdullah-ruby-setup",
+  "publisher": "AbdullahJanjua",
+  "displayName": "Abdullah's Theme",
+  "description": "A pure-black theme with bright, easy-to-read syntax colours, file icons that show what each file and folder is for, and RubyMine-style shortcuts.",
+  "version": "0.0.1",
+  "icon": "images/icon.png",
+  "license": "SEE LICENSE IN LICENSE",
+  "engines": {
+    "vscode": "^1.145.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "black",
+    "dark",
+    "oled",
+    "darcula",
+    "ruby",
+    "icons",
+    "icon-theme",
+    "rails",
+    "rubymine",
+    "keymap",
+    "keybindings"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "themes": [
+      {
+        "label": "Abdullah's Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/abdullahs-theme-color-theme.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "abdullahs-theme.enableUiTweaks",
+        "title": "Enable UI Tweaks",
+        "category": "Abdullah's Theme"
+      },
+      {
+        "command": "abdullahs-theme.disableUiTweaks",
+        "title": "Disable UI Tweaks",
+        "category": "Abdullah's Theme"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "abdullahs-icons",
+        "label": "Abdullah's Icons",
+        "path": "./icons/abdullahs-icon-theme.json"
+      }
+    ],
+    "keybindings": [
+      {
+        "key": "cmd+o",
+        "command": "workbench.action.showAllSymbols",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap"
+      },
+      {
+        "key": "shift+cmd+o",
+        "command": "workbench.action.quickOpen",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap"
+      },
+      {
+        "key": "alt+cmd+o",
+        "command": "workbench.action.showAllSymbols",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap"
+      },
+      {
+        "key": "shift+cmd+a",
+        "command": "workbench.action.showCommands",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap"
+      },
+      {
+        "key": "cmd+e",
+        "command": "workbench.action.showAllEditorsByMostRecentlyUsed",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap"
+      },
+      {
+        "key": "shift+cmd+e",
+        "command": "workbench.action.openRecent",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap"
+      },
+      {
+        "key": "cmd+f12",
+        "command": "workbench.action.gotoSymbol",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap"
+      },
+      {
+        "key": "cmd+l",
+        "command": "workbench.action.gotoLine",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap"
+      },
+      {
+        "key": "cmd+b",
+        "command": "editor.action.revealDefinition",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "alt+cmd+b",
+        "command": "editor.action.goToImplementation",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "shift+cmd+b",
+        "command": "editor.action.goToTypeDefinition",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "alt+f7",
+        "command": "references-view.findReferences",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "alt+cmd+f7",
+        "command": "editor.action.referenceSearch.trigger",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "shift+cmd+t",
+        "command": "rubyLsp.goToRelevantFile",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "ctrl+cmd+up",
+        "command": "rubyLsp.goToRelevantFile",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "cmd+[",
+        "command": "workbench.action.navigateBack",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap"
+      },
+      {
+        "key": "cmd+]",
+        "command": "workbench.action.navigateForward",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap"
+      },
+      {
+        "key": "shift+cmd+backspace",
+        "command": "workbench.action.navigateToLastEditLocation",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap"
+      },
+      {
+        "key": "f2",
+        "command": "editor.action.marker.nextInFiles",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "shift+f2",
+        "command": "editor.action.marker.prevInFiles",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "cmd+f1",
+        "command": "editor.action.showHover",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "f1",
+        "command": "editor.action.showHover",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "cmd+p",
+        "command": "editor.action.triggerParameterHints",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "alt+space",
+        "command": "editor.action.peekDefinition",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "cmd+1",
+        "command": "workbench.view.explorer",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap"
+      },
+      {
+        "key": "cmd+7",
+        "command": "outline.focus",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap"
+      },
+      {
+        "key": "cmd+9",
+        "command": "workbench.view.scm",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap"
+      },
+      {
+        "key": "alt+f12",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap"
+      },
+      {
+        "key": "shift+cmd+f12",
+        "command": "workbench.action.maximizeEditorHideSidebar",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap"
+      },
+      {
+        "key": "cmd+0",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap"
+      },
+      {
+        "key": "cmd+d",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "cmd+backspace",
+        "command": "editor.action.deleteLines",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "ctrl+g",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "ctrl+shift+g",
+        "command": "cursorUndo",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "ctrl+cmd+g",
+        "command": "editor.action.selectHighlights",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "alt+shift+up",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "alt+shift+down",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "shift+cmd+up",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "shift+cmd+down",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "alt+up",
+        "command": "editor.action.smartSelect.expand",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "alt+down",
+        "command": "editor.action.smartSelect.shrink",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "shift+enter",
+        "command": "editor.action.insertLineAfter",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "alt+cmd+enter",
+        "command": "editor.action.insertLineBefore",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "ctrl+shift+j",
+        "command": "editor.action.joinLines",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "alt+cmd+/",
+        "command": "editor.action.blockComment",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "alt+enter",
+        "command": "editor.action.quickFix",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "alt+cmd+t",
+        "command": "editor.action.surroundWithSnippet",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "cmd+j",
+        "command": "editor.action.showSnippets",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "ctrl+space",
+        "command": "editor.action.triggerSuggest",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "shift+cmd+8",
+        "command": "editor.action.toggleColumnSelection",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "cmd+=",
+        "command": "editor.unfold",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "cmd+-",
+        "command": "editor.fold",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "shift+cmd+=",
+        "command": "editor.unfoldAll",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "shift+cmd+-",
+        "command": "editor.foldAll",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "shift+cmd+u",
+        "command": "editor.action.transformToUppercase",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "shift+f6",
+        "command": "editor.action.rename",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "alt+cmd+l",
+        "command": "editor.action.formatDocument",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus && !editorReadonly && !editorHasSelection"
+      },
+      {
+        "key": "alt+cmd+l",
+        "command": "editor.action.formatSelection",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus && !editorReadonly && editorHasSelection"
+      },
+      {
+        "key": "ctrl+alt+o",
+        "command": "editor.action.organizeImports",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "ctrl+t",
+        "command": "editor.action.refactor",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "alt+cmd+m",
+        "command": "editor.action.codeAction",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "cmd+r",
+        "command": "editor.action.startFindReplaceAction",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "shift+cmd+r",
+        "command": "workbench.action.replaceInFiles",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap"
+      },
+      {
+        "key": "ctrl+r",
+        "command": "workbench.action.debug.run",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && !inDebugMode"
+      },
+      {
+        "key": "ctrl+d",
+        "command": "workbench.action.debug.start",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && !inDebugMode"
+      },
+      {
+        "key": "ctrl+shift+r",
+        "command": "rubyLsp.runTest",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorLangId == ruby"
+      },
+      {
+        "key": "ctrl+shift+d",
+        "command": "rubyLsp.debugTest",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorLangId == ruby"
+      },
+      {
+        "key": "cmd+f8",
+        "command": "editor.debug.action.toggleBreakpoint",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && editorTextFocus"
+      },
+      {
+        "key": "shift+cmd+f8",
+        "command": "workbench.debug.action.focusBreakpointsView",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap"
+      },
+      {
+        "key": "f8",
+        "command": "workbench.action.debug.stepOver",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && inDebugMode"
+      },
+      {
+        "key": "f7",
+        "command": "workbench.action.debug.stepInto",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && inDebugMode"
+      },
+      {
+        "key": "shift+f8",
+        "command": "workbench.action.debug.stepOut",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && inDebugMode"
+      },
+      {
+        "key": "alt+cmd+r",
+        "command": "workbench.action.debug.continue",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && inDebugMode"
+      },
+      {
+        "key": "cmd+f2",
+        "command": "workbench.action.debug.stop",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && inDebugMode"
+      },
+      {
+        "key": "alt+f8",
+        "command": "editor.debug.action.selectionToRepl",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && inDebugMode && editorTextFocus"
+      },
+      {
+        "key": "alt+f9",
+        "command": "editor.debug.action.runToCursor",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap && inDebugMode"
+      },
+      {
+        "key": "ctrl+tab",
+        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap"
+      },
+      {
+        "key": "shift+cmd+f4",
+        "command": "workbench.action.closeOtherEditors",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap"
+      },
+      {
+        "key": "shift+cmd+[",
+        "command": "workbench.action.previousEditor",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap"
+      },
+      {
+        "key": "shift+cmd+]",
+        "command": "workbench.action.nextEditor",
+        "when": "isMac && config.abdullahsTheme.rubymineKeymap"
+      }
+    ],
+    "configuration": {
+      "title": "Abdullah's Theme",
+      "properties": {
+        "abdullahsTheme.rubymineKeymap": {
+          "type": "boolean",
+          "default": true,
+          "description": "Use RubyMine (macOS) keyboard shortcuts. Turn off to get VS Code's default shortcuts back."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test",
+    "build:icons": "node scripts/build-icons.js",
+    "build:keymap": "node scripts/build-keymap.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "24.x",
+    "@types/vscode": "^1.145.0",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0",
+    "eslint": "^10.5.0",
+    "simple-icons": "^16.37.0"
+  },
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
+  }
+}

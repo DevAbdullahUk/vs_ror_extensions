@@ -1,0 +1,10 @@
+-# Accession summary
+%section.accession-summary#summary{ data: { controller: 'accession' } }
+  %h2.title= t('.heading', count: @accession.tests.count)
+  - if @accession.urgent?
+    %span.badge.badge-danger Urgent
+  %ul
+    - @accession.tests.each do |test|
+      %li{ class: test.status }= link_to test.name, test_path(test)
+  :javascript
+    console.log("loaded");

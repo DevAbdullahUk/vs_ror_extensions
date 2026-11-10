@@ -1,0 +1,10 @@
+$accent: #4a88c7;
+
+.accession-summary {
+  display: flex;
+  color: rgba(255, 255, 255, 0.8) !important;
+  #summary:hover > h2 {
+    border-bottom: 1px solid $accent;
+  }
+  @include mobile { padding: 8px; }
+}

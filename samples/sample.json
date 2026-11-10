@@ -1,0 +1,9 @@
+{
+  "name": "abdullah-ruby-setup",
+  "version": "0.0.1",
+  "private": true,
+  "engines": { "vscode": "^1.145.0", "node": null },
+  "contributes": {
+    "themes": [{ "label": "Abdullah's Theme", "nested": { "deep": 42 } }]
+  }
+}

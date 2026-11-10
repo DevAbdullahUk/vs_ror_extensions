@@ -1,0 +1,5 @@
+<div class="card" id="test-<%= @test.id %>">
+  <% if @test.urgent? %>
+    <span title="Urgent">&nbsp;<%= t(:urgent) %></span>
+  <% end %>
+</div>
